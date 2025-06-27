@@ -12,13 +12,28 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header
+      className={clsx('hero hero--primary', styles.heroBanner)}
+      style={{ paddingTop: 20 }}
+    >
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <img src={useBaseUrl('/img/astronaut.png')} />
+        <p className="hero__subtitle">Your AI Video Editor</p>
+        <img
+          src={useBaseUrl('/img/astronaut.png')}
+          height={300}
+          style={{ marginBottom: 10 }}
+        />
         <div className={styles.buttons}>
+          <Link
+            style={{ marginRight: 8 }}
+            className="button button--secondary button--lg"
+            to="/docs/get_started"
+          >
+            Get Started
+          </Link>
           <Link
             className="button button--secondary button--lg"
             to="/docs/user_guide"

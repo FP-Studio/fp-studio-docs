@@ -2,17 +2,21 @@ import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { faCubes } from '@fortawesome/free-solid-svg-icons';
+import { faExcavator, faRabbitRunning } from '@fortawesome/pro-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  icon: IconProp;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Comprehensive',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    icon: faCubes,
     description: (
       <>
         FP-Studio works with both FramePack HY and F1 models, allowing for
@@ -23,7 +27,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Accelerated',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    icon: faRabbitRunning,
     description: (
       <>
         We support Sage Attention and MagCache for the fastest possible
@@ -33,7 +37,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Rapidly Evolving',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    icon: faExcavator,
     description: (
       <>
         With a passionate community that is contributing code every day, expect
@@ -44,11 +48,12 @@ const FeatureList: FeatureItem[] = [
   }
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, icon, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {/* <Svg className={styles.featureSvg} role="img" /> */}
+        <FontAwesomeIcon icon={icon} size="4x" style={{ margin: 12 }} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

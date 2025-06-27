@@ -62,8 +62,15 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'navSidebar',
+          type: 'doc',
+          docId: 'get_started',
+          label: 'Get Started',
+          position: 'left'
+        },
+        {
+          type: 'doc',
+          docId: 'user_guide',
+          label: 'User Guide',
           position: 'left'
         },
         {

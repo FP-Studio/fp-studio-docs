@@ -2,9 +2,13 @@
 
 ## Installation
 
+### Pinokio
+
+First, install [Pinokio](https://pinokio.co/docs/#/?id=install). Then, use [this link](https://pinokio.co/item.html?uri=https%3A%2F%2Fgithub.com%2Fcolinurbs%2FFP-Studio) to get a one-click installer for FP-Studio.
+
 ### Docker
 
-If you are not familiar with Python, the most straightforward way to run FP-Studio is to use Docker.
+If you are familiar with Docker or in a server environment, use this method of install.
 
 Windows users should install [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/), Linux users should install [Docker Engine](https://docs.docker.com/engine/install/) for their distro. Unfortunately, due to GitHub Actions limitations we cannot provide builds compatible with Apple Silicon.
 

@@ -1,0 +1,589 @@
+[
+  {
+    "name": "Camera Control",
+    "entries": [
+      {
+        "name": "360 Face Camera",
+        "description": "Enables 360-degree facial camera control for immersive portraits.",
+        "examples": "\"360 face camera, immersive portrait, rotating view, detailed expression\"",
+        "usage": "Recommended strength 0.8-1.0, best at 512x768 resolution with DPM++2M sampler and 20-30 steps.",
+        "infoLink": "https://civitai.com/models/1090949/360-face-camera",
+        "downloadLink": "https://civitai.com/api/download/models/1225249?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Better Close-Up Quality",
+        "description": "Enhances close-up shots with sharp details.",
+        "examples": "\"close-up portrait, sharp details, clear skin texture, soft focus background\"",
+        "usage": "Trained on 92 files (61 videos, 31 images) at 33 frames each, recommended strength 0.7-1.0.",
+        "infoLink": "https://civitai.com/models/1084549/better-close-up-quality",
+        "downloadLink": "https://civitai.com/api/download/models/1084549"
+      },
+      {
+        "name": "Candid Change",
+        "description": "Supports natural transitions in candid scenes.",
+        "examples": "\"candid transition, natural pose, outdoor setting, smooth scene change\"",
+        "usage": "V2 trained on a larger dataset, better for \"obscured camera\" look, recommended strength 0.6-0.9.",
+        "infoLink": "https://civitai.com/models/1318661/candid-change",
+        "downloadLink": "https://civitai.com/api/download/models/1541565?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Cinematik",
+        "description": "HunyuanVideo LoRA - Adds cinematic camera movements.",
+        "examples": "\"cinematic pan, dynamic camera move, dramatic landscape, professional lighting\"",
+        "infoLink": "https://civitai.com/models/1241905/cinematik-hunyuanvideo-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1399707?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Cinematron: Cinematic Vibes for Hunyuan LoRA by Bizarro",
+        "description": "Creates versatile cinematic vibes.",
+        "examples": "\"cinematic vibe, versatile composition, dramatic lighting, storytelling shot\"",
+        "infoLink": "https://civitai.com/models/1323830/cinematron-cinematic-vibes-for-hunyuan-lora-by-bizarro",
+        "downloadLink": "https://civitai.com/api/download/models/1494601?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Dark Raw Dramatic Lighting for Hunyuan",
+        "description": "Enhances dramatic lighting effects.",
+        "examples": "\"dramatic lighting high contrast, shadowy figure, intense spotlight\"",
+        "triggers": "\"dramatic lighting,\" \"high contrast\"",
+        "infoLink": "https://civitai.com/models/1230072/dark-raw-dramatic-lighting-for-hunyuan",
+        "downloadLink": "https://civitai.com/api/download/models/1386064?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "DJZ Backrooms",
+        "description": "Generates eerie backroom-style visuals.",
+        "examples": "\"backrooms style, eerie hallways, liminal space, unsettling angles\"",
+        "infoLink": "https://civitai.com/models/1221889/djz-backrooms",
+        "downloadLink": "https://civitai.com/api/download/models/1221889"
+      },
+      {
+        "name": "Dolly Zoom",
+        "description": "Hunyuan Video LoRA - Applies dolly zoom effects for dramatic shifts.",
+        "examples": "\"dolly zoom effect, dramatic perspective shift, focused subject, blurred background\"",
+        "infoLink": "https://civitai.com/models/1243119/dolly-zoom-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1401121?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Glitchy Camcorder Style Yellowjackets Intro FilmeStyle LoRA",
+        "description": "Adds retro glitchy camcorder effects.",
+        "examples": "\"glitchy camcorder Yellowjackets style, retro distortion, grainy footage\"",
+        "triggers": "\"glitchy camcorder,\" \"Yellowjackets style\"",
+        "infoLink": "https://civitai.com/models/1297029/hunyuanvideo-glitchy-camcorder-style-yellowjackets-intro-filmestyle-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1463848?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "High Speed Drone Shot Hunyuan Video LoRA",
+        "description": "v1.0-heavy - Simulates high-speed drone footage.",
+        "examples": "\"high speed drone shot, sweeping over a dense forest canopy at dusk, fast aerial chase, low altitude flyover of a rugged mountain range\"",
+        "usage": "Recommended guidance 4-6, higher guidance (8) may slow motion.",
+        "infoLink": "https://civitai.com/models/1247109/high-speed-drone-shot-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1405785?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Side by Side Synchronized Video from Different Angles",
+        "description": "Enables synchronized multi-angle views.",
+        "examples": "\"synchronized angles, multi-view scene, dynamic action, split-screen effect\"",
+        "infoLink": "https://civitai.com/models/1276381/side-by-side-synchronized-video-from-different-angles",
+        "downloadLink": "https://civitai.com/api/download/models/1439966?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Ultra Wide Angle Cinematic Shot",
+        "description": "Hunyuan Video LoRA - Provides ultra-wide cinematic perspectives.",
+        "examples": "\"ultra wide angle cinematic perspective, expansive landscape, dramatic horizon\"",
+        "triggers": "\"ultra wide angle,\" \"cinematic perspective\"",
+        "infoLink": "https://civitai.com/models/1280182/ultra-wide-angle-cinematic-shot-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1280182"
+      },
+      {
+        "name": "Matrix Bullet Time Hunyuan video LoRA",
+        "description": "Provides a rotating camera effect.",
+        "examples": "\"a rotating bullet-time shot\"",
+        "usage": "add details for the surroundings in the prompt, strength 1",
+        "infoLink": "https://civitai.com/models/1236871/matrix-bullet-time-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1397746?type=Model&format=SafeTensor"
+      }
+    ]
+  },
+  {
+    "name": "People & Faces ",
+    "entries": [
+      {
+        "name": "90s MTV The Grind",
+        "description": "Hunyuan Video LoRA - Replicates 90s MTV dance style.",
+        "examples": "\"90s MTV Grind, energetic dance, retro TV style, vibrant crowd\"",
+        "infoLink": "https://civitai.com/models/1577139/90s-mtv-the-grind-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1784685?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Boxing",
+        "description": "Enhances boxing match scenes.",
+        "examples": "\"boxing match, dynamic punch, intense gym atmosphere, muscular fighter\"",
+        "infoLink": "https://civitai.com/models/1297421/boxing",
+        "downloadLink": "https://civitai.com/api/download/models/1463063?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Boxing",
+        "description": "Hunyuan Video LoRA - Animates dynamic boxing actions.",
+        "examples": "\"boxer in action, intense fight scene, dynamic punch pose, gym background\"",
+        "infoLink": "https://civitai.com/models/1296343/boxing-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1463063?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Cyber Woman",
+        "description": "Creates futuristic cybernetic female characters.",
+        "examples": "\"cybernetic woman, futuristic armor, neon-lit cityscape, high-tech visor\"",
+        "infoLink": "https://civitai.com/models/1225224/cyber-woman",
+        "downloadLink": "https://civitai.com/api/download/models/1380448?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Default DanceTurkleton",
+        "description": "Hunyuan - Animates default dance movements.",
+        "examples": "\"character performing default dance, vibrant dance floor, colorful lights, energetic pose\"",
+        "infoLink": "https://civitai.com/models/1296068/default-danceturkleton-hunyuan",
+        "downloadLink": "https://civitai.com/api/download/models/1462742?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Digital Human",
+        "description": "Hunyuan Video v1.0 - Generates digital human visuals.",
+        "examples": "\"digital human, pixelated skin, futuristic interface, glowing circuits\"",
+        "infoLink": "https://civitai.com/models/109414/digital-human",
+        "downloadLink": "https://civitai.com/api/download/models/1354515?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Doge Society",
+        "description": "Doge Jones Industrial - Features humorous dog characters.",
+        "examples": "\"Doge society, humorous dog character, industrial background, playful pose\"",
+        "infoLink": "https://civitai.com/models/1194407/doge-society-doge-jones-industrial",
+        "downloadLink": "https://civitai.com/api/download/models/1344814?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Dreampunk",
+        "description": "Creates dreamlike cyberpunk characters.",
+        "examples": "\"dreampunk character, dreamlike cyber city, neon glow, surreal pose\"",
+        "infoLink": "https://civitai.com/models/1324195/dreampunk",
+        "downloadLink": "https://civitai.com/api/download/models/1495016?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Female Face Portraits",
+        "description": "Detailed Skin - HunyuanSkyreels - Creates detailed female face portraits with realistic skin textures, trained on 200+ high-resolution (min 2000px) images and 35 video clips, with visible skin pores, hairs, and blemishes.",
+        "examples": "\"female face portrait, detailed skin texture, realistic makeup, soft lighting\"",
+        "triggers": "\"detailed skin,\" \"female portrait\"",
+        "infoLink": "https://civitai.com/models/1084718/female-face-portraits-detailed-skin-hunyuanskyreels",
+        "downloadLink": "https://civitai.com/api/download/models/1324243?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "First Person Boxing POV",
+        "description": "Hunyuan Video - Offers first-person boxing perspectives.",
+        "examples": "\"first person boxing, POV punch, intense ring action, sweat and focus\"",
+        "infoLink": "https://civitai.com/models/1565816/first-person-boxing-pov-hunyuan-video",
+        "downloadLink": "https://civitai.com/api/download/models/1565816"
+      },
+      {
+        "name": "Framepack Dance",
+        "description": "Animates a variety of dance movements with natural flow.",
+        "examples": "\"framepack dance, natural dance flow, vibrant stage, rhythmic pose\"",
+        "triggers": "\"framepack dance\"",
+        "infoLink": "https://civitai.com/models/1575960/framepack-dance",
+        "downloadLink": "https://civitai.com/api/download/models/1783359?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "FrostyFaces",
+        "description": "Generates icy facial features.",
+        "examples": "\"frosty face, icy features, winter portrait, cool blue tones\"",
+        "infoLink": "https://civitai.com/models/1262985/frostyfaces",
+        "downloadLink": "https://civitai.com/api/download/models/1424270?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Lone Cyclist",
+        "description": "Animates solitary cycling scenes.",
+        "examples": "\"lone cyclist, dynamic ride, scenic trail, focused expression\"",
+        "infoLink": "https://civitai.com/models/1266540/lone-cyclist",
+        "downloadLink": "https://civitai.com/api/download/models/1428499?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "More Dynamic Movements",
+        "description": "Enhances dynamic motion in character animations.",
+        "examples": "\"dynamic movements, energetic pose, fluid action, vibrant scene\"",
+        "infoLink": "https://civitai.com/models/1184984/more-dynamic-movements",
+        "downloadLink": "https://civitai.com/api/download/models/1333892?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Phut Hon Yet Another Sexy Dance LoRA",
+        "description": "Creates seductive dance animations.",
+        "examples": "\"sexy dance Phut Hon style, graceful movements, nightclub setting\"",
+        "triggers": "\"Phut Hon,\" \"sexy dance\"",
+        "infoLink": "https://civitai.com/models/1390027/phut-hon-yet-another-sexy-dance-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1575161?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Poplock Dance",
+        "description": "Animates poplock dance moves.",
+        "examples": "\"poplock dance, rhythmic moves, urban street, robotic style\"",
+        "infoLink": "https://civitai.com/models/1241248/poplock-dance",
+        "downloadLink": "https://civitai.com/api/download/models/1398947?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "PUBG 146",
+        "description": "Framepack - Features a PUBG character with blonde hair performing playful dances.",
+        "examples": "\"PUBG 146, blonde long hair, playful dance, expressive gestures, lively arm waves\"",
+        "triggers": "\"PUBG 146\"",
+        "infoLink": "https://civitai.com/models/1650493/pubg146-framepack",
+        "downloadLink": "https://civitai.com/api/download/models/1868140?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Sexy Dance",
+        "description": "Animates seductive and graceful dance movements.",
+        "examples": "\"sexy dance, graceful pose, dim lighting, elegant flow\"",
+        "triggers": "\"sexy dance\"",
+        "infoLink": "https://civitai.com/models/1110311/sexy-dance",
+        "downloadLink": "https://civitai.com/api/download/models/1247540?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Squid Game Guards",
+        "description": "Depicts Squid Game guard characters.",
+        "examples": "\"Squid Game guard, pink suit, menacing pose, dystopian setting\"",
+        "infoLink": "https://civitai.com/models/1096991/squid-game-guards",
+        "downloadLink": "https://civitai.com/api/download/models/1232219?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Surreal and Fantastic Visuals",
+        "description": "Generates surreal human scenes.",
+        "examples": "\"surreal human, fantastical wings, ethereal forest, glowing aura\"",
+        "infoLink": "https://civitai.com/models/1391714/surreal-and-fantastic-visuals",
+        "downloadLink": "https://civitai.com/api/download/models/1573010?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Trump Signing Executive Order",
+        "description": "Hunyuan Video LoRA - Animates Trump signing scenes.",
+        "examples": "\"Trump signing order, formal office, authoritative pose, official documents\"",
+        "infoLink": "https://civitai.com/models/1296067/trump-signing-executive-order-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1462737?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Twerk Dance",
+        "description": "Animates twerking dance movements with dynamic motion.",
+        "examples": "\"twerk dance, dynamic hip movements, energetic stage, vibrant lighting\"",
+        "triggers": "\"twerk dance\"",
+        "infoLink": "https://civitai.com/models/1092179/twerk-dance",
+        "downloadLink": "https://civitai.com/api/download/models/1226842?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Underground Club",
+        "description": "Hunyuan Video v1.0 - Creates underground dance scenes.",
+        "examples": "\"underground club, neon lights, dancing crowd, smoky atmosphere\"",
+        "infoLink": "https://civitai.com/models/314278/underground-club",
+        "downloadLink": "https://civitai.com/api/download/models/314278"
+      },
+      {
+        "name": "Unleash Your Inner Venom",
+        "description": "Creates Venom transformation scenes.",
+        "examples": "\"Venom transformation, dark symbiote, intense expression, urban rooftop\"",
+        "infoLink": "https://civitai.com/models/1113588/unleash-your-inner-venom",
+        "downloadLink": "https://civitai.com/api/download/models/1277375?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Walking Animation",
+        "description": "Hunyuan Video - Animates walking sequences.",
+        "examples": "\"character walking, smooth gait, urban street, casual attire\"",
+        "infoLink": "https://civitai.com/models/1032126/walking-animation-hunyuan-video",
+        "downloadLink": "https://civitai.com/api/download/models/1157591?type=Model&format=SafeTensor"
+      }
+    ]
+  },
+  {
+    "name": "Animal",
+    "entries": [
+      {
+        "name": "Animal Documentary",
+        "description": "Creates animal documentary-style visuals.",
+        "examples": "\"4n1m4l animal documentary, sleek panther with neon green and electric purple outlines, close-up of a scarlet macaw on a branch\"",
+        "infoLink": "https://civitai.com/models/1277788/animal-documentary-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1441546?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Cats",
+        "description": "Generates videos of various cat breeds and actions.",
+        "examples": "\"cat video, short-haired tabby cat swiping at a butterfly, orange kitten jumping at a toy feather\"",
+        "infoLink": "https://civitai.com/models/1296195/cats-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1462893?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Dogs",
+        "description": "Produces videos of different dog breeds and actions.",
+        "examples": "\"dog video, brown terrier walking down a sidewalk, Shiba Inu with a superhero cape on a hill\"",
+        "infoLink": "https://civitai.com/models/1296097/dogs-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1462774?type=Model&format=SafeTensor"
+      }
+    ]
+  },
+  {
+    "name": "Artistic",
+    "entries": [
+      {
+        "name": "Anaglyph 3D LoRA",
+        "description": "Hunyuan - Creates anaglyph 3D effects.",
+        "examples": "\"anaglyph 3D, red-cyan effect, stereoscopic scene, futuristic city\"",
+        "usage": "Requires anaglyph 3D glasses; works best with detailed prompts describing the 3D effect.",
+        "infoLink": "https://civitai.com/models/1337215/hunyuan-anaglyph-3d-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1510066?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Comic Art Illustration Style",
+        "description": "DiT12 - Applies comic art style.",
+        "examples": "\"comic art, bold lines, vibrant colors, illustrated scene\"",
+        "usage": "Use Euler sampler with CFG scale 5-7 for best results.",
+        "infoLink": "https://civitai.com/models/620212/comic-art-illustration-style-dit12",
+        "downloadLink": "https://civitai.com/api/download/models/693302?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Fluid Art LoRA",
+        "description": "Generates fluid art patterns.",
+        "examples": "\"fluid art, abstract flow, colorful swirls, dynamic motion\"",
+        "triggers": "\"flu1dart\" and \"fluidart style\"",
+        "usage": "Tested at weights 0.8-1.0, trigger words \"flu1dart\" and \"fluidart style\" recommended.",
+        "infoLink": "https://civitai.com/models/644859/fluid-art-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1281131?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Graphical Clothes",
+        "description": "Adds graphical clothing designs.",
+        "examples": "\"graphical clothes, bold patterns, artistic fabric, fashion runway\"",
+        "infoLink": "https://civitai.com/models/123845/graphical-clothes",
+        "downloadLink": "https://civitai.com/api/download/models/1383791?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Hunyuan Canvas",
+        "description": "DiT - Simulates canvas painting effects.",
+        "examples": "\"canvas art, textured painting, vibrant colors, artistic scene\"",
+        "infoLink": "https://civitai.com/models/604801/hunyuandit-canvas",
+        "downloadLink": "https://civitai.com/api/download/models/676060?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Hunyuan DiT LoRA",
+        "description": "Watercolor - Applies watercolor style.",
+        "examples": "\"watercolor style, soft brushstrokes, fluid colors, serene landscape\"",
+        "infoLink": "https://civitai.com/models/604852/hunyuan-dit-lora-watercolor",
+        "downloadLink": "https://civitai.com/api/download/models/676120?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Retro Glitch",
+        "description": "Adds retro glitch effects.",
+        "examples": "\"glitch art retro digital, distorted pixel effect, vibrant glitch overlay\"",
+        "triggers": "\"glitch art,\" \"retro digital\"",
+        "infoLink": "https://civitai.com/models/1339932/retro-glitch",
+        "downloadLink": "https://civitai.com/api/download/models/1636346?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Yuan",
+        "description": "Blends traditional and modern art styles.",
+        "examples": "\"Yuan style, traditional-modern blend, vibrant colors, cultural scene\"",
+        "infoLink": "https://civitai.com/models/665726/yuan",
+        "downloadLink": "https://civitai.com/api/download/models/745054?type=Model&format=SafeTensor"
+      }
+    ]
+  },
+  {
+    "name": "Historical",
+    "entries": [
+      {
+        "name": "1920s Horror",
+        "description": "HunyuanVideo LoRA - Recreates 1920s horror aesthetics.",
+        "examples": "\"1920s horror, grainy film, eerie mansion, shadowy figure, old black and white footage\"",
+        "infoLink": "https://civitai.com/models/1371819/1920s-horror-hunyuanvideo-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1371819"
+      },
+      {
+        "name": "1950s",
+        "description": "Mimics 1950s vintage style.",
+        "examples": "\"1950s style, vintage film look, classic car chase, retro cityscape\"",
+        "infoLink": "https://civitai.com/models/1152161/1950s",
+        "downloadLink": "https://civitai.com/api/download/models/1295889?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "1970s Martial Arts",
+        "description": "HunyuanVideo LoRA - Depicts 1970s martial arts scenes.",
+        "examples": "\"1970s martial arts, classic kung fu pose, retro dojo, dynamic fight\"",
+        "infoLink": "https://civitai.com/models/1405211/1970s-martial-arts-hunyuanvideo-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1588417?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "1980s Fantasy Movies",
+        "description": "HunyuanVideo LoRA - Replicates 1980s fantasy movie style.",
+        "examples": "\"1980s fantasy movie style, a brave knight wielding a glowing sword in a misty enchanted forest, dramatic camera pan, ethereal lighting,\" \"1980s fantasy epic, a sorceress casting a spell with colorful magic effects, wide cinematic shot, vintage film grain\"",
+        "infoLink": "https://civitai.com/models/1386261/1980s-fantasy-movies-hunyuanvideo-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1661806?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "1980s Horror Movie",
+        "description": "Hunyuan Video LoRA - Recreates 1980s horror movie vibes.",
+        "examples": "\"1980s horror movie, grainy film, eerie mansion, shadowy figure\"",
+        "infoLink": "https://civitai.com/models/1592586/1980s-horror-movie-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1802260?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "1700s Pirates LoRA",
+        "description": "Portrays 1700s pirate settings.",
+        "examples": "\"1700s pirate, detailed ship, rugged sea, classic pirate pose\"",
+        "infoLink": "https://civitai.com/models/1423142/1700s-pirates-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1608546?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "AncientRome",
+        "description": "HunyuanVideo - Depicts ancient Roman scenes.",
+        "examples": "\"ancient Rome, classical architecture, Roman soldiers, historic battle\"",
+        "infoLink": "https://civitai.com/models/1339539/ancientrome-hunyuanvideo",
+        "downloadLink": "https://civitai.com/api/download/models/1512698?type=Model&format=SafeTensor"
+      }
+    ]
+  },
+  {
+    "name": "Futuristic",
+    "entries": [
+      {
+        "name": "Cyberpunk Visions by Bizarro for Hunyuan",
+        "description": "Generates cyberpunk cityscapes.",
+        "examples": "\"cyberpunk neon cityscape, futuristic night scene, glowing holograms\"",
+        "triggers": "\"cyberpunk,\" \"neon cityscape\"",
+        "infoLink": "https://civitai.com/models/1249683/cyberpunk-visions-by-bizarro-for-hunyuan",
+        "downloadLink": "https://civitai.com/api/download/models/1408745?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Digitalwave",
+        "description": "Produces digital wave patterns.",
+        "examples": "\"digital wave, futuristic patterns, glowing circuits, electronic flow\"",
+        "infoLink": "https://civitai.com/models/1215441/digitalwave",
+        "downloadLink": "https://civitai.com/api/download/models/1369125?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "DJZ Highway Racing Tokyo",
+        "description": "Captures high-speed Tokyo highway racing scenes.",
+        "examples": "\"highway racing Tokyo, fast cars, neon cityscape, dynamic night drive\"",
+        "triggers": "\"highway racing,\" \"Tokyo\"",
+        "infoLink": "https://civitai.com/models/1210310/djz-highway-racing-tokyo",
+        "downloadLink": "https://civitai.com/api/download/models/1364726?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "DJZ Tokyo Meets",
+        "description": "Blends urban Tokyo styles with vibrant cultural elements.",
+        "examples": "\"Tokyo meets, urban fusion, cultural blend, vibrant streets\"",
+        "triggers": "\"Tokyo meets\"",
+        "infoLink": "https://civitai.com/models/1217032/djz-tokyo-meets",
+        "downloadLink": "https://civitai.com/api/download/models/1370944?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Free Running Parkour",
+        "description": "Hunyuan Video LoRA - Animates parkour movements.",
+        "examples": "\"parkour jump, fluid motion, urban rooftop, high-energy chase\"",
+        "infoLink": "https://civitai.com/models/1295540/free-running-parkour-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1462148?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Getting Dusted",
+        "description": "Simulates disintegration effects.",
+        "examples": "\"character disintegrating, dust effect, dramatic fade, post-battle scene\"",
+        "infoLink": "https://civitai.com/models/1138448/getting-dusted",
+        "downloadLink": "https://civitai.com/api/download/models/1280277?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "GTA-6",
+        "description": "Hunyuan Video - Replicates GTA-6 style visuals.",
+        "examples": "\"GTA 6 style, vibrant city, dynamic action, car chase\"",
+        "infoLink": "https://civitai.com/models/1304909/gta-6-hunyuan-video",
+        "downloadLink": "https://civitai.com/api/download/models/1472490?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Heavymetalstyle",
+        "description": "Applies heavy metal aesthetics.",
+        "examples": "\"heavy metal style, gritty texture, bold leather, stage performance\"",
+        "infoLink": "https://civitai.com/models/179844/heavymetalstyle",
+        "downloadLink": "https://civitai.com/api/download/models/1356835?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Hunyuan Special Effects Video",
+        "description": "Adds special effects to videos.",
+        "examples": "\"special effects explosion, dramatic light burst, cinematic action scene\"",
+        "infoLink": "https://civitai.com/models/1152478/hunyuan-special-effects-video",
+        "downloadLink": "https://civitai.com/api/download/models/1296258?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Hunyuan Video DreamyVibes Style LoRA",
+        "description": "Generates dreamy vibes.",
+        "examples": "\"dreamy vibes, ethereal landscape, soft pastel tones, surreal clouds\"",
+        "infoLink": "https://civitai.com/models/1267274/hunyuan-video-dreamyvibes-style-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1267274"
+      },
+      {
+        "name": "Hunyuan Video LoRA",
+        "description": "AnimeShots - Creates anime-style shots.",
+        "examples": "\"anime girl with pink twin tails and green eyes, wearing a school uniform, holding a stack of books in a bustling library filled with sunlight streaming through tall windows\"",
+        "triggers": "\"anime style,\" \"anime screencap,\" \"anime coloring\"",
+        "infoLink": "https://civitai.com/models/1064343/hunyuan-video-lora-animeshots",
+        "downloadLink": "https://civitai.com/api/download/models/1194497?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Lego Style",
+        "description": "Hunyuan Video LoRA - Applies Lego-style visuals.",
+        "examples": "\"Lego style, blocky character, colorful toy city, playful design\"",
+        "infoLink": "https://civitai.com/models/1295846/lego-style-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1295846"
+      },
+      {
+        "name": "Mad Max Style",
+        "description": "Hunyuan Video LoRA - Recreates Mad Max aesthetics.",
+        "examples": "\"Mad Max style, post-apocalyptic wasteland, rugged vehicle chase, dramatic angles\"",
+        "infoLink": "https://civitai.com/models/1327852/mad-max-style-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1327852"
+      },
+      {
+        "name": "Neon Punk",
+        "description": "HyV - Creates neon punk visuals.",
+        "examples": "\"neon punk, vibrant street art, futuristic urban scene, bold colors\"",
+        "triggers": "\"neon punk,\" \"cyberpunk aesthetic\"",
+        "infoLink": "https://civitai.com/models/1275879/neon-punk-hyv",
+        "downloadLink": "https://civitai.com/api/download/models/1439340?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Odyssey Spacesuit",
+        "description": "Designs futuristic spacesuits.",
+        "examples": "\"odyssey spacesuit, futuristic astronaut, cosmic background, detailed gear\"",
+        "infoLink": "https://civitai.com/models/1211461/odyssey-spacesuit",
+        "downloadLink": "https://civitai.com/api/download/models/1364544?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Old FPS",
+        "description": "Generates retro FPS style.",
+        "examples": "\"pixel art retro FPS, 8-bit character, blocky environment\"",
+        "triggers": "\"pixel art,\" \"retro FPS style\"",
+        "infoLink": "https://civitai.com/models/760132/old-fps",
+        "downloadLink": "https://civitai.com/api/download/models/760132"
+      },
+      {
+        "name": "Pixar Animation Style",
+        "description": "Hunyuan Video LoRA - Applies Pixar animation style.",
+        "examples": "\"Pixar style, vibrant family scene, polished characters, colorful world\"",
+        "infoLink": "https://civitai.com/models/1284996/pixar-animation-style-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1449816?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Robots",
+        "description": "HyV - Creates futuristic robot designs.",
+        "examples": "\"futuristic robot, mechanical design, high-tech city, glowing eyes\"",
+        "infoLink": "https://civitai.com/models/1229146/robots-hyv",
+        "downloadLink": "https://civitai.com/api/download/models/1229146"
+      },
+      {
+        "name": "SD40 Train Locomotive",
+        "description": "Depicts SD40 train visuals.",
+        "examples": "\"SD40 train, detailed locomotive, industrial track, vintage engine\"",
+        "infoLink": "https://civitai.com/models/1280949/sd40-train-locomotive",
+        "downloadLink": "https://civitai.com/api/download/models/1445145?type=Model&format=SafeTensor"
+      },
+      {
+        "name": "Transporter Effect from Star Trek: The Next Generation or Hunyuan Video LoRA",
+        "description": "Simulates transporter effects.",
+        "examples": "\"transporter effect, shimmering beams, Star Trek style, futuristic teleport\"",
+        "infoLink": "https://civitai.com/models/1518315/transporter-effect-from-star-trek-the-next-generation-or-hunyuan-video-lora",
+        "downloadLink": "https://civitai.com/api/download/models/1717810?type=Model&format=SafeTensor"
+      }
+    ]
+  }
+]

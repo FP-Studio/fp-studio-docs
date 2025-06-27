@@ -6,9 +6,12 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import {
+  faBookAtlas,
   faCubes,
   faExcavator,
-  faRabbitRunning
+  faPlayCircle,
+  faRabbitRunning,
+  faToggleOn
 } from '@fortawesome/pro-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -92,17 +95,24 @@ export default function Home(): ReactNode {
           />
           <div className={styles.buttons}>
             <Link
-              className="button button--secondary button--lg"
-              style={{ marginRight: 8 }}
+              className="button button--secondary button--lg margin-right--md"
               to="/docs/get_started"
             >
-              Get Started
+              <FontAwesomeIcon icon={faToggleOn} size="lg" /> Get Started
             </Link>
             <Link
-              className="button button--secondary button--lg"
+              className="button button--secondary button--lg margin-right--md"
               to="/docs/user_guide"
             >
-              User Guide
+              <FontAwesomeIcon icon={faBookAtlas} size="lg" /> User Guide
+            </Link>
+            <Link
+              className="button button--success button--lg"
+              rel="noopener noreferrer"
+              target="_blank"
+              to="https://pinokio.co/item.html?uri=https%3A%2F%2Fgithub.com%2Fcolinurbs%2FFP-Studio"
+            >
+              <FontAwesomeIcon icon={faPlayCircle} size="lg" /> Pinokio Install
             </Link>
           </div>
         </div>

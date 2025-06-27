@@ -87,6 +87,10 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
+              label: 'Get Started',
+              to: '/docs/get_started'
+            },
+            {
               label: 'User Guide',
               to: '/docs/user_guide'
             }

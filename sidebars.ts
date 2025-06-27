@@ -15,7 +15,8 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   navSidebar: [
     { type: 'doc', id: 'get_started', label: 'Get Started' },
-    { type: 'doc', id: 'user_guide', label: 'User Guide' }
+    { type: 'doc', id: 'user_guide', label: 'User Guide' },
+    { type: 'doc', id: 'lora_list', label: 'Video LoRA List' }
   ]
 };
 

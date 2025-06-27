@@ -57,6 +57,8 @@ jobs:
         with:
           node-version: 'lts/*'
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+        env:
+          FONTAWESOME_PACKAGE_TOKEN: ${{ secrets.FONTAWESOME_PACKAGE_TOKEN }}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -71,8 +73,12 @@ jobs:
             ${{ runner.os }}-docusaurus-build-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        env:
+          FONTAWESOME_PACKAGE_TOKEN: ${{ secrets.FONTAWESOME_PACKAGE_TOKEN }}
       - name: Build with Docusaurus
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
+        env:
+          FONTAWESOME_PACKAGE_TOKEN: ${{ secrets.FONTAWESOME_PACKAGE_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

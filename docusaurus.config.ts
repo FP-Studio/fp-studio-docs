@@ -23,7 +23,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ayan4m1', // Usually your GitHub org/user name.
+  organizationName: 'FP-Studio', // Usually your GitHub org/user name.
   projectName: 'fp-studio-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',

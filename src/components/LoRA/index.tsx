@@ -3,6 +3,7 @@ import {
   faQuestionCircle
 } from '@fortawesome/pro-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { slugifyName } from '@site/src/utils';
 
 export interface LoRAProps {
   name: string;
@@ -26,7 +27,7 @@ export default function LoRA({
   return (
     <div className="card margin-bottom--md">
       <div className="card__header">
-        <h3>{name}</h3>
+        <h3 id={slugifyName(name)}>{name}</h3>
       </div>
       <div className="card__body">
         <div className="container">

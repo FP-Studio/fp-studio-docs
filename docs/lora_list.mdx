@@ -1,0 +1,10 @@
+import loraList from './loras.json';
+import LoRA from '../src/components/LoRA';
+
+# LoRAs
+
+A LoRA (Low-Rank Adaptation) is a set of weights which are trained on top of a base model using supplementary data. This technique can be used to create LoRAs which apply coherent cinematic styles, camera movements, facial expressions, faces, characters, and other concepts to a base diffusion / animation model.
+
+_Note_: Special thanks to contrinsan for providing this data!
+
+{loraList.map((category) => (<div><h2>{category.name}</h2>{category.entries.map((lora) => (<LoRA key={lora.name} {...lora} />))}</div>))}

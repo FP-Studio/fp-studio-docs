@@ -58,7 +58,7 @@ const config: Config = {
       title: 'FP-Studio',
       logo: {
         alt: 'FP-Studio Logo',
-        src: 'img/logo.svg'
+        src: 'img/astronaut.png'
       },
       items: [
         {

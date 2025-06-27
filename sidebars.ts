@@ -13,7 +13,10 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
  Create as many sidebars as you want.
  */
 const sidebars: SidebarsConfig = {
-  navSidebar: [{ type: 'doc', id: 'user_guide', label: 'User Guide' }]
+  navSidebar: [
+    { type: 'doc', id: 'get_started', label: 'Get Started' },
+    { type: 'doc', id: 'user_guide', label: 'User Guide' }
+  ]
 };
 
 export default sidebars;

@@ -27,7 +27,9 @@ export default function LoRA({
   return (
     <div className="card margin-bottom--md">
       <div className="card__header">
-        <h3 id={slugifyName(name)}>{name}</h3>
+        <h3 id={slugifyName(name)} style={{ scrollMarginTop: '5rem' }}>
+          {name}
+        </h3>
       </div>
       <div className="card__body">
         <div className="container">

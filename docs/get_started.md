@@ -2,15 +2,34 @@
 
 ## Installation
 
+There are several methods to install FP-Studio. Each has its pros and cons depending on your operating system, familiarity level with different tools, and general computer experience.
+
+You also need to consider which CUDA version you will be targeting based on the GPU you are using.
+
+| GPU Series | Driver CUDA Version | Torch CUDA Version |
+| ---------- | ------------------- | ------------------ |
+| RTX 2XXX   | 12.4                | 12.4               |
+| RTX 3XXX   | 12.6                | 12.6               |
+| RTX 4XXX   | 12.8                | 12.8               |
+| RTX 5XXX   | 12.9                | 12.8               |
+
+Use the "Torch CUDA Version" for your card if the instructions below call for a specific CUDA version.
+
 ### Pinokio
+
+This is the easiest install method for non-technical users, but it is hard to troubleshoot if something goes wrong.
 
 First, install [Pinokio](https://pinokio.co/docs/#/?id=install). Then, use [this link](https://pinokio.co/item.html?uri=https%3A%2F%2Fgithub.com%2Fcolinurbs%2FFP-Studio) to get a one-click installer for FP-Studio.
 
 ### Docker
 
-If you are familiar with Docker or in a server environment, use this method of install.
+If you are familiar with Docker or are running in a server environment, use this method of install.
 
-Windows users should install [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/), Linux users should install [Docker Engine](https://docs.docker.com/engine/install/) for their distro. Unfortunately, due to GitHub Actions limitations we cannot provide builds compatible with Apple Silicon.
+First, make sure Docker is installed:
+
+- [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Intel Mac](https://docs.docker.com/desktop/setup/install/mac-install/) (Unfortunately, due to GitHub Actions limitations we cannot provide builds compatible with Apple Silicon)
+- [Linux](https://docs.docker.com/engine/install/)
 
 Once you have Docker installed and running, you can use the `docker` command from any command prompt to interact with it.
 
@@ -46,7 +65,7 @@ If you used `install.bat` to set up your install, you should run `update.bat` af
 
 ### Manual
 
-If you are familiar with Python or cannot use Docker for some reason, then you can install FP-Studio manually.
+If you are familiar with Python development or cannot use the other methods, then you can install FP-Studio manually.
 
 Run the following commands in a Bash shell (install [Git for Windows](https://gitforwindows.org/) to get Bash on Windows):
 
@@ -57,9 +76,21 @@ python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
-python app.py
+python studio.py
 ```
 
 **Note** the "cu128" at the end of the URL in the torch install command. This means "CUDA 12.8" - if you need CUDA 12.4 or 12.6, you should use `cu124` or `cu126` instead.
 
 The app will now start up and begin downloading models. Once it is done, you should be able to access it at `http://localhost:7860`.
+
+## Startup
+
+When running `python studio.py` to start the application, you may pass the following options:
+
+### CLI Options
+
+- `--share`: Create a public Gradio link to share your interface
+- `--server <address>`: Specify the server address (default: 0.0.0.0)
+- `--port <number>`: Specify a custom port
+- `--inbrowser`: Automatically open the interface in your browser
+- `--offline`: Disable HF model checks to allow use without internet

@@ -16,6 +16,7 @@ const sidebars: SidebarsConfig = {
   navSidebar: [
     { type: 'doc', id: 'get_started', label: 'Get Started' },
     { type: 'doc', id: 'user_guide', label: 'User Guide' },
+    { type: 'doc', id: 'prompting_guide', label: 'Prompting Guide' },
     { type: 'doc', id: 'lora_list', label: 'Video LoRA List' }
   ]
 };

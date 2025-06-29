@@ -1,4 +1,4 @@
-# Prompting
+# Prompting Guide
 
 _Note_: Special thanks to contrinsan for providing this writeup!
 

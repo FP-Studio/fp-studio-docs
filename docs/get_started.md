@@ -109,6 +109,8 @@ pip install flash-attn --no-build-isolation
 
 ### xformers
 
+**NOTE**: Do not use xformers unless you have an [Ampere GPU](<https://en.wikipedia.org/wiki/Ampere_(microarchitecture)#Products_using_Ampere>), as it does not support cards released before that architecture.
+
 Ensure your virtual environment is active, and then use the following command to install xformers:
 
 ```sh

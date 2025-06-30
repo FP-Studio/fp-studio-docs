@@ -83,6 +83,36 @@ python studio.py
 
 The app will now start up and begin downloading models. Once it is done, you should be able to access it at `http://localhost:7860`.
 
+## Attention Libraries
+
+There are a variety of Python libraries which provide an improved "attention" implementation over the one provided with PyTorch. Because attention affects inference speed, installing one of these libraries can give you a significant performance boost. Only one attention library can be used, and it is chosen once at application startup based on which libraries you have installed. The order of preference is:
+
+1. [SageAttention](https://github.com/thu-ml/SageAttention)
+2. [flash-attention](https://github.com/Dao-AILab/flash-attention)
+3. [xformers](https://github.com/facebookresearch/xformers)
+
+This is because SageAttention is faster than flash-attention, which is faster than xformers.
+
+### SageAttention
+
+Ensure your virtual environment is active, and follow their [install instructions](https://github.com/thu-ml/SageAttention?tab=readme-ov-file#install-package).
+
+### flash-attention
+
+Ensure your virtual environment is active, and then use the following command to install flash-attention:
+
+```sh
+pip install flash-attn --no-build-isolation
+```
+
+### xformers
+
+Ensure your virtual environment is active, and then use the following command to install xformers:
+
+```sh
+pip install xformers
+```
+
 ## Startup
 
 When running `python studio.py` to start the application, you may pass the following options:

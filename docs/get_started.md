@@ -59,15 +59,13 @@ To update, simply run `docker compose up -d` again - if there is a new version i
 
 ### Automated (Windows only)
 
-If you are on Windows, you can get up and running quickly by using the `install.bat` file in the FP-Studio directory. Running that will open an interactive prompt that will ask you a couple of questions and then set up all the dependencies for you.
+If you are on Windows, you can get up and running quickly by using the `install.bat` file in the FP-Studio directory. Note that you still need to install [Python 3.12](https://www.python.org/downloads/release/python-31210/), using the default installer options. Then, running `install.bat` will open an interactive prompt that will ask you a couple of questions and then set up all the dependencies for you.
 
 If you used `install.bat` to set up your install, you should run `update.bat` after any FP-Studio version change.
 
 ### Manual
 
-If you are familiar with Python development or cannot use the other methods, then you can install FP-Studio manually.
-
-Run the following commands in a Bash shell (install [Git for Windows](https://gitforwindows.org/) to get Bash on Windows):
+If you are familiar with Python development or cannot use the other methods, then you can install FP-Studio manually. Ensure you have Python 3.10-3.12 installed and on your `$PATH` before you begin. Then Rrn the following commands in a Bash shell (install [Git for Windows](https://gitforwindows.org/) to get Bash on Windows):
 
 ```sh
 git clone https://github.com/colinurbs/FramePack-Studio.git

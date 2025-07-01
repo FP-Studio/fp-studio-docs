@@ -19,7 +19,6 @@ The application offers several distinct methods for generating videos, each tail
 - **Video with Endframe**: Functionally similar to 'video' but allows for use of an endframe to guide the video extension.
 - **Video F1**: Extends videos using the 'F1' model.
 
-- **Grid**: This is a powerful utility for experimentation and comparison. It allows you to generate a grid of videos by systematically varying one or two parameters across the X and Y axes. For example, you can create a grid where each column has a different number of "Steps" and each row has a different "Distilled CFG Scale". This is invaluable for understanding how different parameters affect the final output without having to run each generation manually. After the individual generations complete they will be combined into a final video grid.
 
 ### Generation Parameters
 
@@ -49,7 +48,7 @@ These are the parameters available on the "Generate" screen. Many are shared acr
 
 - **Latent Image**
 
-  - **Applies to**: All types except `Grid` (when no Start Frame is provided).
+  - **Applies to**: All types (when no Start Frame is provided).
   - The initial image to start generation from if no `Start Frame` is given. Options are typically `Black`, `White`, `Noise`, or `Green Screen`.
 
 #### Prompting
@@ -61,12 +60,12 @@ These are the parameters available on the "Generate" screen. Many are shared acr
 
 - **Negative Prompt**
 
-  - **Applies to**: All types except `Grid`.
-  - Describes what you _don't_ want to see in the video, helping to steer the generation away from undesired elements or styles.
+  - **Applies to**: All types.
+  - Describes what you _don't_ want to see in the video, helping to steer the generation away from undesired elements or styles. Currently unused by existing FramePack models.
 
 - **Number of sections to blend between prompts**
 
-  - **Applies to**: All types except `Grid`.
+  - **Applies to**: All types.
   - Controls the smoothness of transitions between different timestamped sections in your prompt. A higher value creates more gradual blending.
 
 #### Generation Settings
@@ -95,6 +94,10 @@ These are the parameters available on the "Generate" screen. Many are shared acr
 
   - **Applies to**: All types.
   - If checked, a new random seed will be used for each generation job.
+
+#### Batch Input
+
+  - Allows for the uploading of multiple images. Currently only supports using them as starting images.
 
 #### Advanced Parameters
 
@@ -132,17 +135,17 @@ These are the parameters available on the "Generate" screen. Many are shared acr
 
 - **Select LoRAs to Load**
 
-  - **Applies to**: All types except `Grid`.
+  - **Applies to**: All types.
   - A dropdown to select one or more LoRA (Low-Rank Adaptation) models to apply during generation. LoRAs are small files that can modify the style or content of the output.
 
 - **LoRA Weight Sliders**
 
-  - **Applies to**: All types except `Grid`.
+  - **Applies to**: All types.
   - Individual sliders appear for each selected LoRA, allowing you to control the strength of its effect.
 
 - **Upload Metadata JSON**
 
-  - **Applies to**: All types except `Grid`.
+  - **Applies to**: All types.
   - Allows you to load all generation parameters from a previously saved JSON file, making it easy to replicate a past generation.
 
 ## Queue Tab
@@ -183,17 +186,11 @@ The central feature of this tab is the data table, which provides a real-time ov
 
 A set of powerful tools is available to help you manage the queue effectively:
 
-- **Refresh Queue**: Manually updates the job list to show the most current status for all jobs.
-
-- **Cancel Queue**: Cancels all jobs that are currently in the `PENDING` state. This will not affect a job that is already `RUNNING`. You will be asked to confirm this action.
-
-- **Clear Complete**: Removes all jobs from the list that have a `COMPLETED`, `FAILED`, or `CANCELLED` status. This is useful for cleaning up the view to only show pending and running jobs.
-
-- **Load Queue**: Loads the default `queue.json` file from your application directory. This is useful for restoring a queue from a previous session.
-
-- **Export Queue**: Saves the current job list and all associated input images/videos into a single `.zip` file. This is perfect for moving a set of jobs to another computer or for archiving your work.
-
-- **Import Queue**: Allows you to upload a `.json` or `.zip` file to add jobs to your queue. This is the corresponding action to `Export Queue` and is great for loading archived jobs or work from another user.
+  - **🔄 Refresh Queue**: Update the job list.
+  - **▶️ Resume Queue**: Resume existing queue.
+  - **📦 Export Queue**: Save the current job list and its media files to a zip file.
+  - **🧹 Clear Completed Jobs**: Remove finished, failed, or cancelled jobs from the list.
+  - **❌ Cancel Queued Jobs**: Cancel all queued jobs (does not cancel the currently running job)
 
 ## Outputs Tab
 

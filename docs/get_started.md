@@ -91,13 +91,13 @@ There are a variety of Python libraries which provide an improved "attention" im
 
 This is because SageAttention is faster than flash-attention, which is faster than xformers.
 
+**NOTE**: Do not install an attention library unless you have an RTX 3000-series or greater card, as RTX 1000- and 2000-series are not supported by any of these libraries and will cause generation errors.
+
 ### SageAttention
 
 Ensure your virtual environment is active, and follow their [install instructions](https://github.com/thu-ml/SageAttention?tab=readme-ov-file#install-package).
 
 ### flash-attention
-
-**NOTE**: Do not use flash-attention unless you have an [Ampere GPU](<https://en.wikipedia.org/wiki/Ampere_(microarchitecture)#Products_using_Ampere>), as it does not support cards released before that architecture.
 
 Ensure your virtual environment is active, and then use the following command to install flash-attention:
 
@@ -106,8 +106,6 @@ pip install flash-attn --no-build-isolation
 ```
 
 ### xformers
-
-**NOTE**: Do not use xformers unless you have an [Ampere GPU](<https://en.wikipedia.org/wiki/Ampere_(microarchitecture)#Products_using_Ampere>), as it does not support cards released before that architecture.
 
 Ensure your virtual environment is active, and then use the following command to install xformers:
 

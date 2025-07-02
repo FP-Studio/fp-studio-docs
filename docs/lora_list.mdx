@@ -8,7 +8,16 @@ A LoRA (Low-Rank Adaptation) is a set of weights which are trained on top of a b
 
 _Note_: Special thanks to contrinsan for providing this data!
 
-{loraList.map((category) => (<div><h2 id={slugifyName(category.name)}>{category.name}</h2>{category.entries.map((lora) => (<LoRA key={lora.name} {...lora} />))}</div>))}
+{loraList.map((category) =>
+(<div>
+
+<h2 id={slugifyName(category.name)}>{category.name}</h2>
+{category.entries.map((lora) => (
+  <LoRA key={lora.name} {...lora} />
+))}
+
+</div>)
+)}
 
 export const toc = loraList.flatMap((category) => [
   {

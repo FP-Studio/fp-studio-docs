@@ -16,7 +16,8 @@ import {
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
+import { usePrefersReducedMotion } from '@anatoliygatt/use-prefers-reduced-motion';
 
 type FeatureItem = {
   title: string;
@@ -75,7 +76,10 @@ function Feature({ title, icon, description }: FeatureItem) {
 }
 
 export default function Home(): ReactNode {
+  const imagePath = useBaseUrl('/img/astronaut.png');
+  const gifPath = useBaseUrl('/img/astronaut-wave.gif');
   const { siteConfig } = useDocusaurusContext();
+  const noAnimation = usePrefersReducedMotion();
 
   return (
     <Layout
@@ -89,25 +93,40 @@ export default function Home(): ReactNode {
           </Heading>
           <p className="hero__subtitle">Your AI Video Editor</p>
           <img
+            className="margin-bottom--md"
             height={300}
-            src={useBaseUrl('/img/astronaut.png')}
-            style={{ marginBottom: 10 }}
+            src={noAnimation ? imagePath : gifPath}
           />
           <div className={styles.buttons}>
             <Link
-              className="button button--secondary button--lg margin-right--md"
+              className={clsx(
+                'button',
+                'button--secondary',
+                'button--lg',
+                styles.button
+              )}
               to="/docs/get_started"
             >
               <FontAwesomeIcon icon={faToggleOn} size="lg" /> Get Started
             </Link>
             <Link
-              className="button button--secondary button--lg margin-right--md"
+              className={clsx(
+                'button',
+                'button--secondary',
+                'button--lg',
+                styles.button
+              )}
               to="/docs/user_guide"
             >
               <FontAwesomeIcon icon={faBookAtlas} size="lg" /> User Guide
             </Link>
             <Link
-              className="button button--success button--lg"
+              className={clsx(
+                'button',
+                'button--success',
+                'button--lg',
+                styles.button
+              )}
               rel="noopener noreferrer"
               target="_blank"
               to="https://pinokio.co/item.html?uri=https%3A%2F%2Fgithub.com%2Fcolinurbs%2FFP-Studio"

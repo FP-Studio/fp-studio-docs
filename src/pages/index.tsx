@@ -15,9 +15,9 @@ import {
 } from '@fortawesome/pro-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { usePrefersReducedMotion } from '@anatoliygatt/use-prefers-reduced-motion';
 
 import styles from './index.module.scss';
-import { usePrefersReducedMotion } from '@anatoliygatt/use-prefers-reduced-motion';
 
 type FeatureItem = {
   title: string;

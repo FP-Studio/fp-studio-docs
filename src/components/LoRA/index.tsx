@@ -5,7 +5,12 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { slugifyName } from '@site/src/utils';
 
-export interface LoRAProps {
+export interface LoRACategoryProps {
+  name: string;
+  entries: LoRAEntryProps[];
+}
+
+export interface LoRAEntryProps {
   name: string;
   description: string;
   usage?: string;
@@ -15,7 +20,7 @@ export interface LoRAProps {
   downloadLink: string;
 }
 
-export default function LoRA({
+function Entry({
   name,
   description,
   usage,
@@ -23,7 +28,7 @@ export default function LoRA({
   triggers,
   infoLink,
   downloadLink
-}: LoRAProps) {
+}: LoRAEntryProps) {
   return (
     <div className="card margin-bottom--md">
       <div className="card__header">
@@ -88,6 +93,17 @@ export default function LoRA({
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function Category({ name, entries }: LoRACategoryProps) {
+  return (
+    <div>
+      <h2 id={slugifyName(name)}>{name}</h2>
+      {entries.map((lora) => (
+        <Entry key={lora.name} {...lora} />
+      ))}
     </div>
   );
 }

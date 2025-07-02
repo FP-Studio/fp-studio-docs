@@ -1,5 +1,5 @@
 import loraList from './loras.json';
-import LoRA from '@site/src/components/LoRA';
+import LoRACategory from '@site/src/components/LoRA';
 import { slugifyName } from '@site/src/utils';
 
 # The Video LoRA List
@@ -8,26 +8,17 @@ A LoRA (Low-Rank Adaptation) is a set of weights which are trained on top of a b
 
 _Note_: Special thanks to contrinsan for providing this data!
 
-{loraList.map((category) =>
-(<div key={category.name}>
-
-<h2 id={slugifyName(category.name)}>{category.name}</h2>
-{category.entries.map((lora) => (
-  <LoRA key={lora.name} {...lora} />
-))}
-
-</div>)
-)}
+{loraList.map((category) => <LoRACategory key={category.name} {...category} />)}
 
 export const toc = loraList.flatMap((category) => [
   {
     level: 2,
-    id: category.name.toLowerCase().replaceAll(/\s+/g, '_'),
+    id: slugifyName(category.name),
     value: category.name
   },
   ...category.entries.map((entry) => ({
     level: 3,
-    id: entry.name.toLowerCase().replaceAll(/\s+/g, '_'),
+    id: slugifyName(entry.name),
     value: entry.name
   }))
 ]);

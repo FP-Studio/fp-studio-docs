@@ -45,11 +45,13 @@ const config: Config = {
           sidebarPath: './sidebars.ts'
         },
         theme: {
-          customCss: './src/css/custom.css'
+          customCss: './src/index.scss'
         }
       } satisfies Preset.Options
     ]
   ],
+
+  plugins: ['docusaurus-plugin-sass'],
 
   themeConfig: {
     // Replace with your project's social card

@@ -24,6 +24,18 @@ The application offers several distinct methods for generating videos, each tail
 
 These are the parameters available on the "Generate" screen. Many are shared across multiple generation types.
 
+#### Basic Parameters
+
+- **Video Length (Seconds)**
+
+  - **Applies to**: All types.
+  - The desired duration of the output video.
+
+- **Resolution (Width & Height)**
+
+  - **Applies to**: All types.
+  - The dimensions of the output video. The system will automatically select the nearest supported "bucket" size.
+
 #### Core Inputs
 
 - **Start Frame (optional)**
@@ -36,6 +48,19 @@ These are the parameters available on the "Generate" screen. Many are shared acr
   - **Applies to**: `Video`, `Video with Endframe`, `Video F1`
   - The source video to be transformed.
 
+- **Combine with source video**
+
+  - **Applies to**: `Video`, `Video with Endframe`, `Video F1`
+  - If checked, in addition to the generated video, a second 'combined' video will be output.
+  - The 'combined' video represents your input video followed by the generated video, matching the resolution of the generated video.
+
+- **Number of Context Frames (Adherence to Video)**
+
+  - **Applies to**: `Video`, `Video with Endframe`, `Video F1`
+  - Controls how much extra context from the end of your input video is considered when generating new video.
+  - 'Context Frames' here represent more than a single input video frame. (Essentially 4 real frames each.)
+  - Higher values retain more detail from the source but are more computationally expensive and can sometimes restrict motion too much.
+
 - **End Frame (Optional)**
 
   - **Applies to**: `Original with Endframe`, `Video with Endframe`
@@ -45,11 +70,6 @@ These are the parameters available on the "Generate" screen. Many are shared acr
 
   - **Applies to**: `Original with Endframe`, `Video with Endframe`
   - A slider (0.05 to 1.0) that controls how strongly the end frame guides the generation. A value of 1.0 means full influence.
-
-- **Latent Image**
-
-  - **Applies to**: All types (when no Start Frame is provided).
-  - The initial image to start generation from if no `Start Frame` is given. Options are typically `Black`, `White`, `Noise`, or `Green Screen`.
 
 #### Prompting
 
@@ -61,29 +81,24 @@ These are the parameters available on the "Generate" screen. Many are shared acr
 - **Negative Prompt**
 
   - **Applies to**: All types.
-  - Describes what you _don't_ want to see in the video, helping to steer the generation away from undesired elements or styles. Currently unused by existing FramePack models.
+  - Only has an effect if CFG Scale (see below) is not 1.
+  - Describes what you _don't_ want to see in the video, helping to steer the generation away from undesired elements or styles. (Consider Negative Prompts, even with CFG Scale not 1, an experimental feature.)
 
 - **Number of sections to blend between prompts**
 
   - **Applies to**: All types.
   - Controls the smoothness of transitions between different timestamped sections in your prompt. A higher value creates more gradual blending.
 
-#### Generation Settings
+#### Batch Input
+
+  - Allows for the uploading of multiple images. Currently only supports using them as starting images.
+
+#### Generation Parameters
 
 - **Steps**
 
   - **Applies to**: All types.
   - The number of denoising steps the model takes to generate each frame. More steps can increase detail but will take longer.
-
-- **Video Length (Seconds)**
-
-  - **Applies to**: All types.
-  - The desired duration of the output video.
-
-- **Resolution (Width & Height)**
-
-  - **Applies to**: All types.
-  - The dimensions of the output video. The system will automatically select the nearest supported "bucket" size.
 
 - **Seed**
 
@@ -95,43 +110,7 @@ These are the parameters available on the "Generate" screen. Many are shared acr
   - **Applies to**: All types.
   - If checked, a new random seed will be used for each generation job.
 
-#### Batch Input
-
-  - Allows for the uploading of multiple images. Currently only supports using them as starting images.
-
-#### Advanced Parameters
-
-- **Use TeaCache**
-
-  - **Applies to**: All types.
-  - Enables a caching mechanism (`TeaCache`) that can significantly speed up generation, though it may slightly degrade the quality of fine details like hands.
-
-- **TeaCache steps**
-
-  - **Applies to**: All types (when `Use TeaCache` is enabled).
-  - The number of intermediate steps to keep in the cache.
-
-- **TeaCache rel_l1_thresh**
-
-  - **Applies to**: All types (when `Use TeaCache` is enabled).
-  - A threshold that determines how much change is needed between frames to invalidate the cache.
-
-- **Distilled CFG Scale**
-
-  - **Applies to**: All types.
-  - Controls how closely the generation adheres to the prompt. Higher values mean stronger adherence.
-
-- **Combine with source video**
-
-  - **Applies to**: `Video`, `Video with Endframe`, `Video F1`
-  - If checked, the generated video will be blended with the original source video.
-
-- **Number of Context Frames (Adherence to Video)**
-
-  - **Applies to**: `Video`, `Video with Endframe`, `Video F1`
-  - Controls how many frames from the source video are considered when generating a new frame. Higher values retain more detail from the source but are more computationally expensive and can sometimes restrict motion too much.
-
-#### LoRAs & Metadata
+#### LoRAs
 
 - **Select LoRAs to Load**
 
@@ -143,10 +122,74 @@ These are the parameters available on the "Generate" screen. Many are shared acr
   - **Applies to**: All types.
   - Individual sliders appear for each selected LoRA, allowing you to control the strength of its effect.
 
+#### Latent Image Options
+
+- **Latent Image**
+
+  - **Applies to**: All types (when no Start Frame is provided).
+  - You typically will not change this from the default `Noise`.
+  - The initial image to start generation from if no `Start Frame` is given. Options are `Black`, `White`, `Noise`, or `Green Screen`.
+
+#### Advanced Parameters
+
+- **Distilled CFG Scale**
+
+  - **Applies to**: All types.
+  - Controls influence of the prompt:
+    - Higher = stronger prompt following.
+    - Lower = more creative (but sometimes just no motion, especially with input images or videos).
+  - The *distilled* version of CFG is 'free' in the sense you won't add time to your generation. Sometimes dialing it up from the default will help. Sometimes not.
+
+- **CFG Scale**
+
+  - **Applies to**: All types.
+  - Controls influence of the prompt. More effective than Distilled CFG, but doubles generation time for any value except 1.
+    - Higher = stronger prompt following
+  - High CFG Scale may make the video look oversaturated or burnt out, degrade image quality, introduce artifacts, or make the image less natural looking. (We've limited the range in our GUI to avoid the most extreme effects.)
+  - Raising CFG Rescale may help counter these effects.
+
+- **CFG Re-Scale**
+
+  - **Applies to**: All types.
+  - Balances the effects of CFG Scale. CFG Re-Scale applies only when CFG Scale is not 1.
+  - If you see negative effects from CFG Scale, CFG Re-Scale may soften the effect, making the video look more natural.
+  - If your video becomes washed out or loses detail/sharpness or dynamic range, or looks plasticky, your CFG Re-Scale may be too high.
+
+- **Cache Options**
+
+  - **Applies to**: All types.
+  - Enable a caching mechanism (`MagCache` or `TeaCache`) that can significantly speed up generation, though it may slightly degrade the quality of fine details like hands. The option `None` disables caching. 
+
+- **MagCache Threshold**
+  - Accumulated error tolerance before skipping/estimating a step.
+  - Lower vaues are faster but may deviate from the non-cached version more.
+  - Lower values may introduce more artifacts, and/or lose more detail.
+
+- **MagCache Max Consecutive Skips**
+  - Controls how many steps in a row may be skipped.
+  - Higher values may be faster, but raises the likelihood of deviating from the non-cached version. The overall accumuated threshold is still in effect.
+
+- **MagCache Retention Ratio**
+  - The fraction of (typically very influential) early steps that cannot be skipped.
+  - Lower is faster, but raises the likelihood of deviating from the non-cached version.
+  
+- **TeaCache steps**
+
+  - **Applies to**: All types (when `Use TeaCache` is enabled).
+  - This value should match the number of steps in your generation Parameters.
+
+- **TeaCache rel_l1_thresh**
+
+  - **Applies to**: All types (when `Use TeaCache` is enabled).
+  - A threshold that determines how much change is needed between frames to skip a computation step.
+
+#### Upload Metadata JSON (optional)
+
 - **Upload Metadata JSON**
 
   - **Applies to**: All types.
-  - Allows you to load all generation parameters from a previously saved JSON file, making it easy to replicate a past generation.
+  - Each time you generate video, a .json file is saved with your outputs.
+  - Dropping or uploading a .json file loads all generation parameters used when it was created, making it easy to replicate a past generation.
 
 ## Queue Tab
 

@@ -58,7 +58,6 @@ These are the parameters available on the "Generate" screen. Many are shared acr
 
   - **Applies to**: `Video`, `Video with Endframe`, `Video F1`
   - Controls how much extra context from the end of your input video is considered when generating new video.
-  - 'Context Frames' here represent more than a single input video frame. (Essentially 4 real frames each.)
   - Higher values retain more detail from the source but are more computationally expensive and can sometimes restrict motion too much.
 
 - **End Frame (Optional)**

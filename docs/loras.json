@@ -576,13 +576,6 @@
         "examples": "\"SD40 train, detailed locomotive, industrial track, vintage engine\"",
         "infoLink": "https://civitai.com/models/1280949/sd40-train-locomotive",
         "downloadLink": "https://civitai.com/api/download/models/1445145?type=Model&format=SafeTensor"
-      },
-      {
-        "name": "Transporter Effect from Star Trek: The Next Generation or Hunyuan Video LoRA",
-        "description": "Simulates transporter effects.",
-        "examples": "\"transporter effect, shimmering beams, Star Trek style, futuristic teleport\"",
-        "infoLink": "https://civitai.com/models/1518315/transporter-effect-from-star-trek-the-next-generation-or-hunyuan-video-lora",
-        "downloadLink": "https://civitai.com/api/download/models/1717810?type=Model&format=SafeTensor"
       }
     ]
   }
